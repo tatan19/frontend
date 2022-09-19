@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css'>
+    <link rel="stylesheet" href="./style.css">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <input class="menu-icon" type="checkbox" id="menu-icon" name="menu-icon"/>
+    <label for="menu-icon"></label>
+    <nav class="nav"> 		
+        <ul class="pt-5">
+            <li><a href="triangulos.html">triangulo</a></li>
+            <li><a href="longitud.html">Long de tu palabra</a></li>
+            <li><a href="convertidor.html">Convertidor</a></li>
+            <li><a href="formulariopro.html">Instructor</a></li>
+      <li><a href="figuras.html">Figura</a></li>
+      <li><a href="valicampos.html">FormularioV</a></li>
+          
+        </ul>
+    </nav>
+
+    <div class="contenedor" id="contenedor">
+        <p id="titulo">Selecciona el instructor y la actividad, Buena suerte</p>
+        <div class="fila">
+            <span id="formnom">Nombre</span>
+            <select name="nombre" id="nombre">
+                <option value="Tatiana">Tatiana</option>
+                <option value="Carolina">Carolina</option>
+                <option value="Adriana">Adriana</option>
+                <option value="Yaneth">Yaneth</option>
+                <option value="Jonathan">Jonathan</option>
+                <option value="Luis">Luis</option>
+                <option value="Fernado">Fernado</option>
+            </select>
+
+            <span id="formape" >Apellido</span>
+            <select name="apellido" id="apellido">
+                <option value="Cabrera">Cabrera</option>
+                <option value="Forero">Forero</option>
+                <option value="Duarte">Duarte</option>
+                <option value="Castillo">Castillo</option>
+                <option value="Espitia">Espitia</option>
+                <option value="Baquero">Baquero</option>
+                <option value="Galindo">Galindo</option>
+                
+            </select>
+
+            <span id="formacti">Actividad</span>
+            <select name="actividad" id="actividad">
+                <option value="Calidad">Calidad</option>
+                <option value="Proyecto">Proyecto</option>
+                <option value="Frontend">Frontend</option>
+                <option value="Ambiental">Ambiental</option>
+                <option value="Backend">Backend</option>
+                <option value="Fisica">Fisica</option>
+                <option value="Datos">Datos</option>
+            </select>
+        </div>
+        <br>
+        <input  id="suerte" type="submit" value="Tu suerte" onclick="opcio()">
+        <br>
+    </div>
+    <br>
+    <p id="resultado">
+                        
+    </p>
+
+    <script src="assets/js/formulariopro.js"></script>
+</body>
+
+</html>

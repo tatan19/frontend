@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css'>
+  <link rel="stylesheet" href="./style.css">
+  <title>Document</title>
+</head>
+
+<body>
+
+  <input class="menu-icon" type="checkbox" id="menu-icon" name="menu-icon"/>
+  	<label for="menu-icon"></label>
+  	<nav class="nav"> 		
+  		<ul class="pt-5">
+  			<li><a href="triangulos.html">triangulo</a></li>
+  			<li><a href="longitud.html">Long de tu palabra</a></li>
+			  <li><a href="convertidor.html">Convertidor</a></li>
+  			<li><a href="formulariopro.html">Instructor</a></li>
+        <li><a href="figuras.html">Figura</a></li>
+        <li><a href="valicampos.html">FormularioV</a></li>
+			
+  		</ul>
+  	</nav>
+
+  <form>
+    <br>
+    <div class="form-group">
+      <input type="text" class="form-control" id="nombre" placeholder="Escribe tu palabra">
+    </div>
+    <br>
+    <br>
+    <ul class="form">
+      <li><a href="" value="Longitud de tu palabra" id="long1" onclick="long()">Longitud de tu palabra</a></li>
+      <br>
+      <br>
+      <li><a href="" type="submit" value="Tu palabra a mayuscula" id="mayus1" onclick="mayus()"> Tu palabra en
+          mayuscula</a></li>
+      <br>
+      <br>
+      <li><a href="" ype="submit" value="Tu palabra a minuscula" onclick="minus()">Tu palabra en minuscula</a></li>
+      <br>
+      <br>
+      <li><a href="" type="submit" value="Tu primer caracter es" id="primer1" onclick="primer()">El primer caracter de
+          tu palabra</a></li>
+    </ul>
+  </form>
+
+  <script src="assets/js/longitud.js"></script>
+
+</body>
+
+</html>

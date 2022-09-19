@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css'><link rel="stylesheet" href="./style.css">
+  
+  <title>Document</title>
+</head>
+
+<body >
+
+  <input class="menu-icon" type="checkbox" id="menu-icon" name="menu-icon"/>
+  	<label for="menu-icon"></label>
+  	<nav class="nav"> 		
+  		<ul class="pt-5">
+  			<li><a href="triangulos.html">triangulo</a></li>
+  			<li><a href="longitud.html">Long de tu palabra</a></li>
+			  <li><a href="convertidor.html">Convertidor</a></li>
+  			<li><a href="formulariopro.html">Instructor</a></li>
+        <li><a href="figuras.html">Figura</a></li>
+        <li><a href="valicampos.html">FormularioV</a></li>
+			
+  		</ul>
+  	</nav>
+  <form id="for1">
+    <div class="formulario">
+      <div class="form-group">
+        <input type="number" class="form-control" id="a" placeholder="Lado a">
+      </div>
+      <br>
+      <div class="form-group">
+        <input type="number" class="form-control" id="b" placeholder="Lado b">
+      </div>
+      
+      <div class="form-group">
+        <input type="number" class="form-control" id="c" placeholder="Lado c">
+      </div>
+      <br>
+
+      <input type="submit" value="Tu triangulo es:" id="lad" onclick="lado()">
+    </div>
+  </form>
+
+
+  <script src="assets/js/triangulos.js"></script>
+</body>
+
+</html>
