@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8"
+        crossorigin="anonymous"></script>
+    <title>Document</title>
+</head>
+
+<body>
+
+    <!-- CARD CUADRADO -->
+    <div class="card" style="width: 18rem;">
+        <div class="card-body">
+            <h5 class="card-title">Cuadrado</h5>
+            <img src="https://cdn.kastatic.org/ka-perseus-images/1bf54665b00b4b9ebc15e10687dac516efae8f09.png">
+            <button type="button" class="btn btn-outline-info" data-bs-toggle="modal"
+                data-bs-target="#cuadradoperimetro">
+                Perímetro
+            </button>
+            <button type="button" class="btn btn-outline-info" data-bs-toggle="modal" data-bs-target="#cuadradoarea">
+                Área
+            </button>
+        </div>
+    </div>
+    <!-- Modal perimetroC -->
+    <div class="modal fade" id="cuadradoperimetro" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+        aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="staticBackdropLabel">PERÍMETRO CUADRADO</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="mb-3">
+                        <label for="lado" class="form-label">Lado</label>
+                        <input type="number" class="form-control" id="lado" placeholder="0">
+                        <p id="resultado">
+                        
+                        </p>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                    <button type="button" onclick="CalcularPerimetro();" class="btn btn-primary">Calcular</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Modal areaC -->
+    <div class="modal fade" id="cuadradoarea" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+        aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="staticBackdropLabel">ÁREA CUADRADO</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="mb-3">
+                        <label for="lado" class="form-label">Lado</label>
+                        <input type="number" class="form-control" id="ladoa" placeholder="0">
+                        <p id="resultadoa">
+                        
+                        </p>
+                    </div>
+
+                    
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                    <button type="button" onclick="CalcularArea();" class="btn btn-primary">Calcular</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- ---------------------------------------------------------------------------------------------------- -->
+
+
+    <!-- CARD TRIANGULO -->
+    <div class="card" style="width: 18rem;">
+        <div class="card-body">
+            <h5 class="card-title">Triangulo</h5>
+            <img src="https://us.123rf.com/450wm/phys1cx/phys1cx1605/phys1cx160500093/57560164-icono-de-tri%C3%A1ngulo-de-penrose-forma-de-tri%C3%A1ngulo-imposible-ilusi%C3%B3n-%C3%B3ptica-ilustraci%C3%B3n-del-vector-ais.jpg?ver=6"
+                class="card-img-top">
+            <button type="button" class="btn btn-outline-danger" data-bs-toggle="modal"
+                data-bs-target="#trianguloperimetro">
+                Perímetro
+            </button>
+            <button type="button" class="btn btn-outline-danger" data-bs-toggle="modal" data-bs-target="#trianguloarea">
+                Área
+            </button>
+        </div>
+    </div>
+    <!-- Modal perimetroT -->
+    <div class="modal fade" id="trianguloperimetro" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+        aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="staticBackdropLabel">PERÍMETRO TRIANGULO</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <label for="ladotp1" class="form-label">Lado1</label>
+                    <input type="number" class="form-control" id="ladotp1" placeholder="0">
+                    <label for="ladotp2" class="form-label">Lado2</label>
+                    <input type="number" class="form-control" id="ladotp2" placeholder="0">
+                    <label for="ladotp3" class="form-label">Lado3</label>
+                    <input type="number" class="form-control" id="ladotp3" placeholder="0">
+                    <p id="resultadotp">
+                        
+                    </p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                    <button type="button" onclick="CalcularPerimetroT()" class="btn btn-primary">Calcular</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Modal areaT -->
+    <div class="modal fade" id="trianguloarea" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+        aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="staticBackdropLabel">ÁREA TRIANGULO</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <label for="baseta" class="form-label">Base</label>
+                    <input type="number" class="form-control" id="baseta" placeholder="0">
+                    <label for="alturata" class="form-label">Altura</label>
+                    <input type="number" class="form-control" id="alturata" placeholder="0">
+                    <p id="resultadota">
+                        
+                    </p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                    <button type="button"  onclick="CalcularAreaT()"class="btn btn-primary">Calcular</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- ------------------------------------------------------------------------------------- -->
+
+
+    <!-- CARD CIRCULO -->
+    <div class="card" style="width: 18rem;">
+        <div class="card-body">
+            <h5 class="card-title">Circulo</h5>
+            <img src="https://www.vectorizados.com/muestras/circulo_3d.gif" class="card-img-top">
+            <button type="button" class="btn btn-outline-warning" data-bs-toggle="modal"
+                data-bs-target="#circuloperimetro">
+                Perímetro
+            </button>
+            <button type="button" class="btn btn-outline-warning" data-bs-toggle="modal" data-bs-target="#circuloarea">
+                Área
+            </button>
+        </div>
+    </div>
+    <!-- Modal perimetroC -->
+    <div class="modal fade" id="circuloperimetro" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+        aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="staticBackdropLabel">PERÍMETRO CIRCULO</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <label for="radio" class="form-label">Radio</label>
+                    <input type="number" class="form-control" id="radio" placeholder="0">
+                    <p id="resultadoperimetro">
+                        
+                    </p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                    <button type="button" onclick="CalcularPerimetroC()" class="btn btn-primary">Calcular</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Modal areaC -->
+    <div class="modal fade" id="circuloarea" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+        aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="staticBackdropLabel">ÁREA CIRCULO</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <label for="radio" class="form-label">radio</label>
+                    <input type="number" class="form-control" id="radio" placeholder="0">
+                    <p id="resultadoarea">
+                        
+                    </p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerra</button>
+                    <button type="button" onclick="CalcularAreaC()" class="btn btn-primary">Calcular</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- -------------------------------------------------------------------------------------------------------- -->
+    <!-- CARD RECTANGULO -->
+    <div class="card" style="width: 18rem;">
+        <div class="card-body">
+            <h5 class="card-title">Rectangulo</h5>
+            <img src="https://cdn-icons-png.flaticon.com/512/3873/3873844.png" class="card-img-top">
+            <button type="button" class="btn btn-outline-danger" data-bs-toggle="modal"
+                data-bs-target="#rectanguloperimetro">
+                Perímetro
+            </button>
+            <button type="button" class="btn btn-outline-danger" data-bs-toggle="modal"
+                data-bs-target="#rectanguloarea">
+                Área
+            </button>
+        </div>
+    </div>
+    <!-- Modal perimetroR -->
+    <div class="modal fade" id="rectanguloperimetro" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+        aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="staticBackdropLabel">PERÍMETRO RECTANGULO</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="modal-body">
+                        <label for="basep" class="form-label">base</label>
+                        <input type="number" class="form-control" id="basep" placeholder="0">
+                        <label for="alturap" class="form-label">altura</label>
+                        <input type="number" class="form-control" id="alturap" placeholder="0">
+
+                        <p id="resultadoperimetror">
+                            
+                        </p>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                    <button type="button" onclick="CalcularPerimetroR()" class="btn btn-primary">Calcular</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Modal areaR -->
+    <div class="modal fade" id="rectanguloarea" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+        aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="staticBackdropLabel">ÁREA RECTANGULO</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="modal-body">
+                        <label for="baser" class="form-label">base</label>
+                        <input type="number" class="form-control" id="baser" placeholder="0">
+                        <label for="alturar" class="form-label">altura</label>
+                        <input type="number" class="form-control" id="alturar" placeholder="0">
+
+                        <p id="resultadoarear">
+                            
+                        </p>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                    <button type="button" onclick="CalcularAreaR()" class="btn btn-primary">Calcular</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="assets/js/figuras.js"></script>
+
+
+</body>
+
+</html>
